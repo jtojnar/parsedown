@@ -1453,6 +1453,13 @@ class Parsedown
 
         foreach ($Elements as $Element)
         {
+            if (is_string($Element)) # because of Markup
+            {
+                $markup .= $Element;
+
+                continue;
+            }
+
             $markup .= "\n" . $this->element($Element);
         }
 
