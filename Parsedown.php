@@ -197,7 +197,7 @@ class Parsedown
 
             # ~
 
-            $marker = $text[0];
+            $marker = mb_substr($text, 0, 1);
 
             # ~
 
